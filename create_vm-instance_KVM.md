@@ -224,8 +224,8 @@ AWS や OpenStack 等でも同様な手順で初期設定が可能なので(元�
       gateway4: 172.31.250.254
       nameservers:
         addresses: 
-          - 172.31.102.199
-          - 172.31.102.193
+          - <NameServer1>
+          - <NameServer2>
       dhcp6: false
   $ genisoimage -input-charset utf-8 -output ./$(basename $(pwd)).iso -volid cidata -joliet -rock \
   > user-data meta-data network-config
@@ -377,7 +377,7 @@ AWS や OpenStack 等でも同様な手順で初期設定が可能なので(元�
   ```bash
   $ df -h /
   Filesystem      Size  Used Avail Use% Mounted on
-  /dev/vda1       7.6G 1006M  6.6G  13% /
+  /dev/vda1        16G  1.2G   15G   8% /
   ```
 - apt proxy
   ```bash
@@ -410,8 +410,8 @@ AWS や OpenStack 等でも同様な手順で初期設定が可能なので(元�
               gateway4: 172.31.250.254
               nameservers:
                   addresses:
-                  - 172.31.102.199
-                  - 172.31.102.193
+                  - <NameServer1>
+                  - <NameServer2>
       version: 2
   ```
 - ssh_pwauth: False
